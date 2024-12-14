@@ -222,10 +222,7 @@ export class HomePage implements OnInit {
     // Basemap OpenStreetMap
     const openStreetMap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    });
-
-    // Menambahkan layer basemap ke peta
-    openStreetMap.addTo(this.map);
+    }).addTo(this.map);
 
     // Menambahkan marker untuk setiap museum
     this.museums.forEach(museum => {
