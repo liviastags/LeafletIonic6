@@ -119,6 +119,96 @@ export class HomePage implements OnInit {
       "latitude": -7.7839154,
       "longitude": 110.3932776
     },
+    {
+      "Museum": "The Sidik Martowidjojo Museum",
+      "Hari": "Monday - Sunday",
+      "Jam": "10.00 am - 10.00 pm",
+      "Harga": "Free",
+      "Rating": "4.1",
+      "latitude": -7.8084446,
+      "longitude": 110.3629506
+    },
+    {
+      "Museum": "Amri Museum and Gallery",
+      "Hari": "Monday - Sunday",
+      "Jam": "09.00 am - 04.00 pm",
+      "Harga": "Free",
+      "Rating": "4.4",
+      "latitude": -7.7993231,
+      "longitude": 110.3537702
+    },
+    {
+      "Museum": "Tino Sidin Park",
+      "Hari": "Monday - Saturday",
+      "Jam": "09.00 am - 03.00 pm",
+      "Harga": "Rp5.000 - Rp10.000",
+      "Rating": "4.7",
+      "latitude": -7.7995125,
+      "longitude": 110.3449674
+    },
+    {
+      "Museum": "Sonobudaya Museum Unit l",
+      "Hari": "Tuesday - Sunday",
+      "Jam": "08.00 am - 05.00 pm",
+      "Harga": "Rp5.000 - Rp20.000",
+      "Rating": "5.0",
+      "latitude": -7.8024367,
+      "longitude": 110.3643695
+    },
+    {
+      "Museum": "UPY Museorium of History",
+      "Hari": "Monday - Friday",
+      "Jam": "08.00 am - 05.00 pm",
+      "Harga": "Free",
+      "Rating": "4.9",
+      "latitude": -7.8059437,
+      "longitude": 110.3410734
+    },
+    {
+      "Museum": "Kraton Jogja",
+      "Hari": "Tuesday - Sunday",
+      "Jam": "08.00 am - 02.00 pm",
+      "Harga": "Rp10.000 - Rp25.000",
+      "Rating": "4.8",
+      "latitude": -7.8069625,
+      "longitude": 110.3639219
+    },
+    {
+      "Museum": "Yogya Returns Monument",
+      "Hari": "Tuesday - Sunday",
+      "Jam": "08.00 am - 04.00 pm",
+      "Harga": "Rp15.000",
+      "Rating": "4.5",
+      "latitude": -7.7495904,
+      "longitude": 110.3696068
+    },
+    {
+      "Museum": "Omah Jayeng Museum",
+      "Hari": "Tuesday - Sunday",
+      "Jam": "10.00 am - 10.00 pm",
+      "Harga": "Free",
+      "Rating": "4.9",
+      "latitude": -7.7995418,
+      "longitude": 110.3726691
+    },
+    {
+      "Museum": "Omah UGM Kotagede Yogyakarta",
+      "Hari": "Monday - Sunday",
+      "Jam": "09.00 am - 05.00 pm",
+      "Harga": "Free",
+      "Rating": "4.7",
+      "latitude": -7.8293112,
+      "longitude": 110.3956256
+    },
+    {
+      "Museum": "Wijilan Art",
+      "Hari": "Tuesday - Sunday",
+      "Jam": "08.00 am - 08.00 pm",
+      "Harga": "Free",
+      "Rating": "4.5",
+      "latitude": -7.8066064,
+      "longitude": 110.3666953
+    }
   ];
 
   constructor() {}
