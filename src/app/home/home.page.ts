@@ -220,7 +220,7 @@ export class HomePage {
 
   ionViewDidEnter() {
     // Inisialisasi peta
-    this.map = L.map('mapId').setView([-7.797068, 110.370529], 10);
+    this.map = L.map('mapId').setView([-7.797068, 110.370529], 13);
 
     // Tambahkan layer basemap
     const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
