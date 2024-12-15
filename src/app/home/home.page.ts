@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import * as L from 'leaflet';
 
 @Component({
-  selector: 'app-home', // Nama selector untuk komponen ini
-  templateUrl: './home.page.html', // Lokasi template HTML untuk komponen
-  styleUrls: ['./home.page.scss'], // Lokasi stylesheet untuk komponen
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage {
+
   map!: L.Map;
+
+
 
   // Data museum dari JSON yang diberikan
   museums = [
@@ -211,28 +214,51 @@ export class HomePage implements OnInit {
     }
   ];
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   ionViewDidEnter() {
     // Inisialisasi peta
-    this.map = L.map('mapId').setView([-7.8001175, 110.3534164], 13);
+    this.map = L.map('mapId').setView([-7.797068, 110.370529], 10);
 
-    // Basemap OpenStreetMap
-    const openStreetMap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    // Tambahkan layer basemap
+    const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(this.map);
+    });
+    osm.addTo(this.map);
 
-    // Menambahkan marker untuk setiap museum
+    // Tambahkan marker untuk setiap mahasiswa
     this.museums.forEach(museum => {
-      const marker = L.marker([museum.latitude, museum.longitude]).addTo(this.map)
+      const customIcon = L.divIcon({
+        html: '<i class="fa-solid fa-location-dot" style="font-size: 24px; color: red;"></i>',
+        className: 'custom-div-icon',
+        iconSize: [24, 24],
+        iconAnchor: [12, 24],
+      });
+
+      const marker = L.marker([museum.latitude, museum.longitude], { icon: customIcon })
+        .addTo(this.map)
         .bindPopup(`
           <b>${museum.Museum}</b><br>
           <b>Open Hours:</b> ${museum.Hari} - ${museum.Jam}<br>
           <b>Price:</b> ${museum.Harga}<br>
           <b>Rating:</b> ${museum.Rating}<br>
         `);
-    });
-  }
+    });
+  }
 }
+
+
+//     // Menambahkan marker untuk setiap museum
+//     this.museums.forEach(museum => {
+//       const marker = L.marker([museum.latitude, museum.longitude]).addTo(this.map)
+//         .bindPopup(`
+//           <b>${museum.Museum}</b><br>
+//           <b>Open Hours:</b> ${museum.Hari} - ${museum.Jam}<br>
+//           <b>Price:</b> ${museum.Harga}<br>
+//           <b>Rating:</b> ${museum.Rating}<br>
+//         `);
+//     });
+//   }
+// }
